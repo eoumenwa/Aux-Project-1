@@ -32,9 +32,9 @@ userfile=$(cat names.csv)
         echo
 # We need to set permission for the key file
         su - -c "chmod 600 ~/.ssh/authorized_keys" $user
-        cp -R "/home/ubuntu/.ssh/id_rsa.pub" "/home/$user/.ssh/authorized_keys"
+        Copying the public key to each user’s authorized _key file 
+       	cp -R "/home/ubuntu/.ssh/id_rsa.pub" "/home/$user/.ssh/authorized_keys"
         echo
- 	echo "$public_key > /home/$user/.ssh/authorized_keys"
         echo "Copied the Public Key to New User Account on the server"
         echo
         echo
