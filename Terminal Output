@@ -1429,3 +1429,160 @@ Password inactivity period: The number of days after a password has expired duri
 Account expiration date: The date of expiration of the account, expressed as the number of days since Jan 1, 1970.
 Reserved field: Not used or reserved for future use.
 
+
+*****login to created users with ssh
+
+emmanuel@webserver:~$ ssh apparel@webserver 
+
+The authenticity of host 'webserver (127.0.1.1)' can't be established.
+ECDSA key fingerprint is SHA256:cZZimI8NM9l9MsiwbxYvV0WRRMzQkup+J3R1o3D6n4M.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'webserver' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.8.0-43-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+162 updates can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+*** System restart required ***
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+This is my first Linux machine
+I use it to practice Linux commands
+If you are not authorized then please exit out
+apparel@webserver:~$ 
+apparel@webserver:~$ ssh emmanuel@webserver
+The authenticity of host 'webserver (127.0.1.1)' can't be established.
+ECDSA key fingerprint is SHA256:cZZimI8NM9l9MsiwbxYvV0WRRMzQkup+J3R1o3D6n4M.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'webserver' (ECDSA) to the list of known hosts.
+emmanuel@webserver's password: 
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.8.0-43-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+162 updates can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+*** System restart required ***
+This is my first Linux machine
+I use it to practice Linux commands
+If you are not authorized then please exit out
+Last login: Mon Feb 22 11:32:28 2021 from 192.168.0.5
+emmanuel@webserver:~$ ssh tle@webserver 
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.8.0-43-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+162 updates can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+*** System restart required ***
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+This is my first Linux machine
+I use it to practice Linux commands
+If you are not authorized then please exit out
+tle@webserver:~$ ssh apparel@webserver 
+The authenticity of host 'webserver (127.0.1.1)' can't be established.
+ECDSA key fingerprint is SHA256:cZZimI8NM9l9MsiwbxYvV0WRRMzQkup+J3R1o3D6n4M.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'webserver' (ECDSA) to the list of known hosts.
+apparel@webserver's password: 
+Permission denied, please try again.
+apparel@webserver's password: 
+Permission denied, please try again.
+apparel@webserver's password: 
+apparel@webserver: Permission denied (publickey,password).
+tle@webserver:~$ logout
+Connection to webserver closed.
+emmanuel@webserver:~$ 
+apparel@webserver:~$ ssh emmanuel@webserver
+The authenticity of host 'webserver (127.0.1.1)' can't be established.
+ECDSA key fingerprint is SHA256:cZZimI8NM9l9MsiwbxYvV0WRRMzQkup+J3R1o3D6n4M.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'webserver' (ECDSA) to the list of known hosts.
+emmanuel@webserver's password: 
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.8.0-43-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+162 updates can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+*** System restart required ***
+This is my first Linux machine
+I use it to practice Linux commands
+If you are not authorized then please exit out
+Last login: Mon Feb 22 11:32:28 2021 from 192.168.0.5
+emmanuel@webserver:~$ ssh tle@webserver 
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.8.0-43-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+162 updates can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+*** System restart required ***
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+This is my first Linux machine
+I use it to practice Linux commands
+If you are not authorized then please exit out
+tle@webserver:~$ ssh apparel@webserver 
+The authenticity of host 'webserver (127.0.1.1)' can't be established.
+ECDSA key fingerprint is SHA256:cZZimI8NM9l9MsiwbxYvV0WRRMzQkup+J3R1o3D6n4M.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'webserver' (ECDSA) to the list of known hosts.
+apparel@webserver's password: 
+Permission denied, please try again.
+apparel@webserver's password: 
+Permission denied, please try again.
+apparel@webserver's password: 
+apparel@webserver: Permission denied (publickey,password).
+tle@webserver:~$ logout
+Connection to webserver closed.
+emmanuel@webserver:~$ 
+
+
+
