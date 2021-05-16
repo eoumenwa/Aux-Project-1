@@ -1569,7 +1569,9 @@ applicable law.
 This is my first Linux machine
 I use it to practice Linux commands
 If you are not authorized then please exit out
+
 tle@webserver:~$ ssh apparel@webserver 
+
 The authenticity of host 'webserver (127.0.1.1)' can't be established.
 ECDSA key fingerprint is SHA256:cZZimI8NM9l9MsiwbxYvV0WRRMzQkup+J3R1o3D6n4M.
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
@@ -1580,8 +1582,10 @@ apparel@webserver's password:
 Permission denied, please try again.
 apparel@webserver's password: 
 apparel@webserver: Permission denied (publickey,password).
+
 tle@webserver:~$ logout
 Connection to webserver closed.
+
 emmanuel@webserver:~$ 
 
 
