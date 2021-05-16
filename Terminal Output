@@ -84,6 +84,8 @@ spiderman:x:1001:
 ironman:x:1003:
 
 
+
+
 emmanuel@webserver:~$ sudo cat /etc/shadow
 root:!:18637:0:99999:7:::
 daemon:*:18474:0:99999:7:::
@@ -155,6 +157,10 @@ Christy:!:18659:0:99999:7:::
 Nathan:!:18659:0:99999:7:::
 fridaytest:!:18670:0:99999:7:::
 sshd:*:18674:0:99999:7:::
+
+
+
+
 
 
 emmanuel@webserver:~$ sudo cat /etc/passwd
@@ -1311,4 +1317,115 @@ Copied the Public Key to New User Account on the server
 
 
 USER PROFILE SUCCESSFULLY SET UP
+
+
+
+
+
+root@webserver:~# cat /etc/shadow
+root:!:18637:0:99999:7:::
+daemon:*:18474:0:99999:7:::
+bin:*:18474:0:99999:7:::
+sys:*:18474:0:99999:7:::
+sync:*:18474:0:99999:7:::
+games:*:18474:0:99999:7:::
+man:*:18474:0:99999:7:::
+lp:*:18474:0:99999:7:::
+mail:*:18474:0:99999:7:::
+news:*:18474:0:99999:7:::
+uucp:*:18474:0:99999:7:::
+proxy:*:18474:0:99999:7:::
+www-data:*:18474:0:99999:7:::
+backup:*:18474:0:99999:7:::
+list:*:18474:0:99999:7:::
+irc:*:18474:0:99999:7:::
+gnats:*:18474:0:99999:7:::
+nobody:*:18474:0:99999:7:::
+systemd-network:*:18474:0:99999:7:::
+systemd-resolve:*:18474:0:99999:7:::
+systemd-timesync:*:18474:0:99999:7:::
+messagebus:*:18474:0:99999:7:::
+syslog:*:18474:0:99999:7:::
+_apt:*:18474:0:99999:7:::
+tss:*:18474:0:99999:7:::
+uuidd:*:18474:0:99999:7:::
+tcpdump:*:18474:0:99999:7:::
+avahi-autoipd:*:18474:0:99999:7:::
+usbmux:*:18474:0:99999:7:::
+rtkit:*:18474:0:99999:7:::
+dnsmasq:*:18474:0:99999:7:::
+cups-pk-helper:*:18474:0:99999:7:::
+speech-dispatcher:!:18474:0:99999:7:::
+avahi:*:18474:0:99999:7:::
+kernoops:*:18474:0:99999:7:::
+saned:*:18474:0:99999:7:::
+nm-openvpn:*:18474:0:99999:7:::
+hplip:*:18474:0:99999:7:::
+whoopsie:*:18474:0:99999:7:::
+colord:*:18474:0:99999:7:::
+geoclue:*:18474:0:99999:7:::
+pulse:*:18474:0:99999:7:::
+gnome-initial-setup:*:18474:0:99999:7:::
+gdm:*:18474:0:99999:7:::
+emmanuel:$6$j6i8wJGHe04adIJ6$qjFabG0YcZ4D0pParFGxc1SxbJHwLXB/6w71V7PYNLAIJVaJ32zyODiIhjWhw9P7G0grFQS/SJ7zdCFjAZhES.:18637:0:99999:7:::
+systemd-coredump:!!:18637::::::
+vboxadd:!:18637::::::
+spiderman:!:18646:0:99999:7:::
+ironman:$6$TZBKbnfyZFJfxoXx$4V9YAQPd6TOoxk9zTLl5vonBhzf6DhQDlXG.pZqbye/qwrRJEwbexB0oVmERMYnzGNI.lNuTK1iLU5qbo4qD81:18646:0:99999:7:::
+Charles:!:18659:0:99999:7:::
+Stephanie:!:18659:0:99999:7:::
+Gale:!:18659:0:99999:7:::
+Marcus:!:18659:0:99999:7:::
+Keylan:!:18659:0:99999:7:::
+Marty:!:18659:0:99999:7:::
+Gregory:!:18659:0:99999:7:::
+Erica:!:18659:0:99999:7:::
+Afoma:!:18659:0:99999:7:::
+Ayanna:!:18659:0:99999:7:::
+Nishonda:!:18659:0:99999:7:::
+Amy:!:18659:0:99999:7:::
+Mellisa:!:18659:0:99999:7:::
+Darian:!:18659:0:99999:7:::
+Fenton:!:18659:0:99999:7:::
+Morgan:!:18659:0:99999:7:::
+Chinenye:!:18659:0:99999:7:::
+Christy:!:18659:0:99999:7:::
+Nathan:!:18659:0:99999:7:::
+fridaytest:!:18670:0:99999:7:::
+sshd:*:18674:0:99999:7:::
+apparel:!:18762:0:99999:7:::
+ogp:!:18762:0:99999:7:::
+lawngarden:!:18762:0:99999:7:::
+receiving:!:18762:0:99999:7:::
+frontoffice:!:18762:0:99999:7:::
+backoffice:!:18762:0:99999:7:::
+frozen:!:18762:0:99999:7:::
+chilled:!:18762:0:99999:7:::
+dairy:!:18762:0:99999:7:::
+stocking:!:18762:0:99999:7:::
+merchandise:!:18762:0:99999:7:::
+maintenance:!:18762:0:99999:7:::
+pharmacy:!:18762:0:99999:7:::
+tle:!:18762:0:99999:7:::
+customerservice:!:18762:0:99999:7:::
+moneytransfer:!:18762:0:99999:7:::
+
+
+
+*****************some explanations *****************
+
+These are the Nine fields, which is in /etc/shadow file.
+
+moneytransfer:!                 :18762                       :0               :99999           :7                      :                       :   :
+username     :Encrypted Password:Date of last password change:Min password age:Max password age:Password warning period:Password warning period:PIP:AED
+
+Username: User login name, it be a valid account name, which exist on the system.
+Encrypted Password: Encrypted Password hash, which contains three parts like hash_algorithm, hash_salt, and hash_data.
+Date of last password change: The date of the last password change, expressed as the number of days since Jan 1, 1970.
+Minimum password age: The minimum password age is the number of days the user will have to wait before she will be allowed to change her password again.
+Maximum password age: The maximum password age is the number of days after which the user will have to change her password.
+Password warning period: The number of days before a password is going to expire (see the maximum password age above) during which the user should be warned.
+Password inactivity period: The number of days after a password has expired during which the password should still be accepted. After expiration of the password and this expiration period is elapsed, no login is possible using the current user’s password.
+Account expiration date: The date of expiration of the account, expressed as the number of days since Jan 1, 1970.
+Reserved field: Not used or reserved for future use.
 
