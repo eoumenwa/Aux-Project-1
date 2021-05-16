@@ -1,16 +1,9 @@
-emmanuel@webserver:~/.ssh$ cd ..
-emmanuel@webserver:~$ ls -l /etc/groups
-ls: cannot access '/etc/groups': No such file or directory
-emmanuel@webserver:~$ sudo ls -l /etc/groups
-[sudo] password for emmanuel: 
-ls: cannot access '/etc/groups': No such file or directory
 emmanuel@webserver:~$ sudo ls -l /etc/group
 -rw-r--r-- 1 root root 1159 Feb 12 04:46 /etc/group
+
 emmanuel@webserver:~$ sudo ls -l /etc/shadow
 -rw-r----- 1 root shadow 2218 Feb 16 10:10 /etc/shadow
-emmanuel@webserver:~$ cat ls -l /etc/group
-cat: invalid option -- 'l'
-Try 'cat --help' for more information.
+
 emmanuel@webserver:~$ cat /etc/group
 root:x:0:
 daemon:x:1:
@@ -89,8 +82,8 @@ vboxsf:x:998:
 superheros:x:1002:spiderman,ironman
 spiderman:x:1001:
 ironman:x:1003:
-emmanuel@webserver:~$ cat /etc/shadow
-cat: /etc/shadow: Permission denied
+
+
 emmanuel@webserver:~$ sudo cat /etc/shadow
 root:!:18637:0:99999:7:::
 daemon:*:18474:0:99999:7:::
@@ -162,11 +155,10 @@ Christy:!:18659:0:99999:7:::
 Nathan:!:18659:0:99999:7:::
 fridaytest:!:18670:0:99999:7:::
 sshd:*:18674:0:99999:7:::
-emmanuel@webserver:~$ sudo cat /etc/password
-cat: /etc/password: No such file or directory
-emmanuel@webserver:~$ sudo cat /etc/paswd
-cat: /etc/paswd: No such file or directory
+
+
 emmanuel@webserver:~$ sudo cat /etc/passwd
+
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
@@ -237,28 +229,25 @@ Christy:x:1021:1004::/home/Christy:/bin/bash
 Nathan:x:1022:1004::/home/Nathan:/bin/bash
 fridaytest:x:1023:1004::/home/fridaytest:/bin/bash
 sshd:x:126:65534::/run/sshd:/usr/sbin/nologin
-emmanuel@webserver:~$ whihc bash
-
-Command 'whihc' not found, did you mean:
-
-  command 'which' from deb debianutils (4.9.1)
-
-Try: sudo apt install <deb name>
 
 emmanuel@webserver:~$ which bash
 /usr/bin/bash
-emmanuel@webserver:~$ cd sheell
-bash: cd: sheell: No such file or directory
+
 emmanuel@webserver:~$ cd shell
+
 emmanuel@webserver:~/shell$ ls
 names.csv  onboarding-users
+
 emmanuel@webserver:~/shell$ vim onboarding-users 
+
 emmanuel@webserver:~/shell$ ./onboarding-users 
 Only Admin Can Onboard A User
 
 
 emmanuel@webserver:~/shell$ vim onboarding-users 
+
 emmanuel@webserver:~/shell$ cd /
+
 emmanuel@webserver:/$ ls -l
 total 459344
 lrwxrwxrwx   1 root root         7 Jan  9 19:05 bin -> usr/bin
@@ -286,28 +275,47 @@ dr-xr-xr-x  13 root root         0 May 14 09:49 sys
 drwxrwxrwt  19 root root      4096 May 15 06:48 tmp
 drwxr-xr-x  14 root root      4096 Jul 31  2020 usr
 drwxr-xr-x  15 root root      4096 Feb 16 15:40 var
+
+
 emmanuel@webserver:/$ ls -l /home/emmanuel/shell/onboarding-users 
 -rwxrwxr-x 1 emmanuel emmanuel 1578 May 15 06:47 /home/emmanuel/shell/onboarding-users
+
+
 emmanuel@webserver:/$ cd ~
+
+
 emmanuel@webserver:~$ su -
 Password: 
 su: Authentication failure
+
 emmanuel@webserver:~$ su -
 Password: 
 su: Authentication failure
+
 emmanuel@webserver:~$ sudo ./onboarding-users 
 [sudo] password for emmanuel: 
+
 sudo: ./onboarding-users: command not found
+
 emmanuel@webserver:~$ sudo su -
+
 root@webserver:~# ls -l /home/emmanuel/shell/onboarding-users 
 -rwxrwxr-x 1 emmanuel emmanuel 1578 May 15 06:47 /home/emmanuel/shell/onboarding-users
+
+
+
+*********Running the shell script ******************* with the path to its location
+
 root@webserver:~# /home/emmanuel/shell/onboarding-users 
 cat: names.csv: No such file or directory
+
+****************required file not found in current location***********************
 
 
 root@webserver:~# ls -l
 total 4
 drwxr-xr-x 3 root root 4096 Jan 10 06:21 snap
+
 root@webserver:~# ls -la
 total 68
 drwx------  9 root root 4096 May 13 05:56 .
@@ -324,7 +332,9 @@ drwxr-xr-x  2 root root 4096 Feb 16 10:40 .rpmdb
 drwxr-xr-x  3 root root 4096 Jan 10 06:21 snap
 drwx------  2 root root 4096 Feb 16 10:12 .ssh
 -rw-------  1 root root 9609 Feb 20 13:53 .viminfo
-root@webserver:~# cp /home/emmanuel/shell/names.csv /
+
+root@webserver:~# cp /home/emmanuel/shell/names.csv /   ***************************************moving names.csv to root
+
 root@webserver:~# ls -la
 total 68
 drwx------  9 root root 4096 May 13 05:56 .
@@ -341,111 +351,164 @@ drwxr-xr-x  2 root root 4096 Feb 16 10:40 .rpmdb
 drwxr-xr-x  3 root root 4096 Jan 10 06:21 snap
 drwx------  2 root root 4096 Feb 16 10:12 .ssh
 -rw-------  1 root root 9609 Feb 20 13:53 .viminfo
+
+
 root@webserver:~# ls
 snap
+
+
 root@webserver:~# pwd
 /root
+
+
 root@webserver:~# cd root
 -bash: cd: root: No such file or directory
+
+
 root@webserver:~# cd /root
+
+
 root@webserver:~# ls
 snap
+
 root@webserver:~# cd snap
+
 root@webserver:~/snap# ls
 snap-store
+
 root@webserver:~/snap# cd ..
+
 root@webserver:~# cd ..
+
 root@webserver:/# ls
 bin    dev   lib    libx32      mnt        proc  sbin  swapfile  usr
 boot   etc   lib32  lost+found  names.csv  root  snap  sys       var
 cdrom  home  lib64  media       opt        run   srv   tmp
-]root@webserver:/# ]pwd
 
-Command ']pwd' not found, did you mean:
 
-  command 'pwd' from deb coreutils (8.30-3ubuntu2)
-  command 'hpwd' from deb hfsutils (3.2.6-14)
-
-Try: apt install <deb name>
 
 root@webserver:/# pwd
 /
+
 root@webserver:/# cd ..
+
 root@webserver:/# cd ~
+
 root@webserver:~# ls
 snap
+
+
 root@webserver:~# cp /home/emmanuel/shell/names.csv 
 cp: missing destination file operand after '/home/emmanuel/shell/names.csv'
-Try 'cp --help' for more information.
-root@webserver:~# cp /home/emmanuel/shell/names.csv .
+
+root@webserver:~# cp /home/emmanuel/shell/names.csv .                             *********** used . to copy to current directory of root ie root's home
+
 root@webserver:~# ls
 names.csv  snap
+
 root@webserver:~# pwd
 /root
+
 root@webserver:~# cd ..
+
 root@webserver:/# ls
 bin    dev   lib    libx32      mnt        proc  sbin  swapfile  usr
 boot   etc   lib32  lost+found  names.csv  root  snap  sys       var
 cdrom  home  lib64  media       opt        run   srv   tmp
+
 root@webserver:/# rm names.csv 
+
 root@webserver:/# ls
 bin    dev   lib    libx32      mnt   root  snap      sys  var
 boot   etc   lib32  lost+found  opt   run   srv       tmp
 cdrom  home  lib64  media       proc  sbin  swapfile  usr
+
 root@webserver:/# ls
 bin    dev   lib    libx32      mnt   root  snap      sys  var
 boot   etc   lib32  lost+found  opt   run   srv       tmp
 cdrom  home  lib64  media       proc  sbin  swapfile  usr
+
 root@webserver:/# cd ..
+
 root@webserver:/# cd ~
+
 root@webserver:~# ls
 names.csv  snap
+
 root@webserver:~# logout
+
 emmanuel@webserver:~$ ls
 error.txt	      Music	 ps		      shell
 error.txtcd	      myscripts  Public		      Todo
 logfile-activity.log  Pictures	 seinfeld-characters  typescript
+
 emmanuel@webserver:~$ pwd
 /home/emmanuel
+
 emmanuel@webserver:~$ cd ..
+
 emmanuel@webserver:/home$ cd ..
+
 emmanuel@webserver:/$ ls
 bin    dev   lib    libx32	mnt   root  snap      sys  var
 boot   etc   lib32  lost+found	opt   run   srv       tmp
 cdrom  home  lib64  media	proc  sbin  swapfile  usr
+
 emmanuel@webserver:/$ cd ~
+
 emmanuel@webserver:~$ ls
 error.txt	      Music	 ps		      shell
 error.txtcd	      myscripts  Public		      Todo
 logfile-activity.log  Pictures	 seinfeld-characters  typescript
+
 emmanuel@webserver:~$ pwd
 /home/emmanuel
+
 emmanuel@webserver:~$ cd ..
+
 emmanuel@webserver:/home$ ls
 emmanuel
+
 emmanuel@webserver:/home$ ls -la
 total 12
 drwxr-xr-x  3 root     root     4096 May 13 06:54 .
 drwxr-xr-x 20 root     root     4096 May 15 07:00 ..
 drwxr-xr-x 17 emmanuel emmanuel 4096 May 15 06:47 emmanuel
+
 emmanuel@webserver:/home$ sudo su -
+
+
 root@webserver:~# ls
 names.csv  snap
+
+
 root@webserver:~# pwd
 /root
+
+
 root@webserver:~# logout
+
 emmanuel@webserver:/home$ ls
 emmanuel
+
 emmanuel@webserver:/home$ ls -la
 total 12
 drwxr-xr-x  3 root     root     4096 May 13 06:54 .
 drwxr-xr-x 20 root     root     4096 May 15 07:00 ..
 drwxr-xr-x 17 emmanuel emmanuel 4096 May 15 06:47 emmanuel
+
+
 emmanuel@webserver:/home$ pwd
 /home
+
+
 emmanuel@webserver:/home$ cd ~
+
+
 emmanuel@webserver:~$ pwd
 /home/emmanuel
+
+
 emmanuel@webserver:~$ ls -la
 total 136
 drwxr-xr-x 17 emmanuel emmanuel  4096 May 15 06:47 .
@@ -478,9 +541,18 @@ drwxrwxr-x  3 emmanuel emmanuel  4096 May 13 06:53 Todo
 -rw-r-----  1 emmanuel emmanuel     5 May 15 06:20 .vboxclient-draganddrop.pid
 -rw-r-----  1 emmanuel emmanuel     5 May 15 06:20 .vboxclient-seamless.pid
 -rw-------  1 emmanuel emmanuel  9186 May 15 06:47 .viminfo
+
+
 emmanuel@webserver:~$ sudo su -
+
 root@webserver:~# ls
 names.csv  snap
+
+
+
+*********Running the shell script ******************* with the path to its location
+
+
 root@webserver:~# /home/emmanuel/shell/onboarding-users 
 apparel
 useradd: group 'developers' does not exist
@@ -819,9 +891,12 @@ Copied the Public Key to New User Account on the server
 USER PROFILE SUCCESSFULLY SET UP
 
 
+******Users have been improperly set up**************
+
 
 root@webserver:~# cat etc/group
 cat: etc/group: No such file or directory
+
 root@webserver:~# cat /etc/group
 root:x:0:
 daemon:x:1:
@@ -900,16 +975,14 @@ vboxsf:x:998:
 superheros:x:1002:spiderman,ironman
 spiderman:x:1001:
 ironman:x:1003:
-root@webserver:~# group add developers
 
-Command 'group' not found, did you mean:
 
-  command 'groups' from deb coreutils (8.30-3ubuntu2)
-  command 'grop' from deb grop (2:0.10-1.1build1)
+root@webserver:~# group add developers   *************** manually adding the group for developers
 
-Try: apt install <deb name>
+
 
 root@webserver:~# groupadd developers
+
 root@webserver:~# cat /etc/group
 root:x:0:
 daemon:x:1:
@@ -989,6 +1062,15 @@ superheros:x:1002:spiderman,ironman
 spiderman:x:1001:
 ironman:x:1003:
 developers:x:1004:
+
+
+
+
+
+
+*********Running the shell script ******************* with group "developers created manually"
+
+
 root@webserver:~# /home/emmanuel/shell/onboarding-users 
 apparel
 New User Created
